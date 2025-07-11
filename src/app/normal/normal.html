@@ -1,0 +1,12 @@
+<form (ngSubmit)= "enviar()" #miForm="ngForm" >
+    <label >Name:
+        <input type="text" name="name" [(ngModel)]="name" required [(ngModel)]="name" #nameInput="ngModel" />
+    </label>
+    <input type="submit" value="Enviar" [disabled]="!miForm.valid" />
+</form>
+<ul>
+    <li *ngFor="let n of names">{{n}}</li>
+    @for (item of names; track $index) {
+        <li>{{item}}</li>
+    }
+</ul>
